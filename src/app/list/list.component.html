@@ -1,0 +1,13 @@
+<div class="row mt-5">
+  <div class="col-3" *ngFor="let hero of heros">
+    <div [ngClass]="{'card p-2': true, 'high': hero.power > 100, 'medium': hero.power > 50 && hero.power <= 100, 'low': hero.power <= 50 }">
+      <img class="card-img-top w-100 h-100"
+        [src]="hero.imageUrl"
+        alt="Hero Image">
+      <div class="card-body">
+        <h2>{{hero.name}}</h2>
+        <p>{{hero.power}}</p>
+      </div>
+    </div>
+  </div>
+</div>
